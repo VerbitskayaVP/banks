@@ -1,15 +1,11 @@
-
-public class sum extends differentiated_payment {
-    /**  Подсчет суммы всех выплат*/
-    /**
-     * Объявление перменной, хранящей сумму всех выплат
-     */
-    double benefits_amount = 0;
-
-    public void overpayment_sum(int i) {
-        double[] overpayment_sum = new double[(int) Main.loan_term];
-        overpayment_sum[i] = answer;
-        benefits_amount+=overpayment_sum[i];
+/** Класс служит для подсчета всех выплат по кредиту
+ * @author Veronika
+ * */
+public class sum extends input_data {
+    /** Выводит сумму всех выплат
+     * */
+    public void print_out(){
+        format_class f=new format_class();
+        System.out.println("Сумма всех выплат составит: "+f.format(annuity_payment.monthly_payment*loan_term));
     }
-
 }

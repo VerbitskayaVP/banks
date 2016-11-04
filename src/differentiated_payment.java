@@ -1,5 +1,5 @@
 
-public class differentiated_payment {
+public class differentiated_payment extends input_data{
     public static double answer;
 
     /**
@@ -8,12 +8,15 @@ public class differentiated_payment {
      */
 
     /** Создание метода @calculation с аргументами класса @differentiated_payment */
-    public void calculation(double sum, double interest_rate, double loan_term, int i) {
-        System.out.print("Месяц " + (i + 1) + " = ");
+    public void calculation(int i) {
         answer = ((sum / loan_term) + (sum - (sum / loan_term) * i) * (interest_rate / 100) / 12);
-        System.out.printf("%.2f", answer);
+
+    }
+    public void print_out(int i){
+        format_class f=new format_class();
+
+        System.out.println("Месяц " + (i + 1) + ": ");
+        System.out.println(" Основной долг: "+f.format(sum/loan_term)+"\n Сумма платежа с процентами: "+f.format(answer));
         System.out.println("");
-        sum Sum = new sum();
-        Sum.overpayment_sum(i);
     }
 }
