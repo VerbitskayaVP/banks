@@ -1,7 +1,10 @@
 import java.util.Scanner;
-/** Класс служит для ввода начальных значений (меню)
+
+/**
+ * Класс служит для ввода начальных значений (меню)
+ *
  * @author Veronika
- * */
+ */
 
 
 public class input_data {
@@ -15,13 +18,15 @@ public class input_data {
     /**
      * @value currency - валюта кредита
      * @value payment_type - тип платежа
-     * */
+     */
     public static String currency, payment_type;
 
 
-    /** Метод для ввода начальных значений (меню)
+    /**
+     * Метод для ввода начальных значений (меню)
+     *
      * @see input_data#inputValue()
-     * */
+     */
     public static void inputValue() {
         int i;
         Scanner scanner = new Scanner(System.in);
@@ -32,21 +37,24 @@ public class input_data {
         System.out.println(" 4. Военная ипотека");
         System.out.println(" 5. Кредитные карты");
 
-        /** Вызов метода для назначения процентной ставки в зависимости от программы кредитования
+        /**
+         * Вызов метода для назначения процентной ставки
+         * в зависимости от программы кредитования
          * */
-        crediting Crediting=new crediting();
+        crediting Crediting = new crediting();
         Crediting.crediting();
 
-        /**Проверка на превышение макисмального кредита в зависимости от программы кредитования
+        /**Проверка на превышение макисмального кредита
+         * в зависимости от программы кредитования
          * @param i - номер программы кредитования*/
         System.out.println("Введите размер кредита:");
-        checkCredit Check=new checkCredit();
-        Check.checkCredit(Crediting.i);
+        checkCredit Check = new checkCredit();
+        Check.checkcredit(Crediting.i);
 
         /** Назначение валюты
          * */
         System.out.println("Выберите валюту кредита:\n 1. Рубли \n 2. Евро \n 3. Доллары");
-        currency Currency=new currency();
+        currency Currency = new currency();
         Currency.currency();
 
         /**
@@ -58,13 +66,15 @@ public class input_data {
         /** Назначение типа платежа
          * */
         System.out.println("Введите тип платежа: \n 1. Аннуитетный \n 2. Дифференцированный");
-        payment_type Pay=new payment_type();
+        payment_type Pay = new payment_type();
         Pay.payment_type();
     }
 
-    /** Метод для вывода расчетов в зависимости от типа платежа
+    /**
+     * Метод для вывода расчетов в зависимости от типа платежа
+     *
      * @see input_data#calculation()
-     * */
+     */
     public void calculation() {
         sum Sum = new sum();
         System.out.println("*************График платежей*************** \n");
@@ -81,9 +91,6 @@ public class input_data {
                 annuity_payment an_pay = new annuity_payment();
                 an_pay.calculation(i);
             }
-            /** Вызов функции расчета суммы всех выплат
-             * */
-            Sum.overpayment_sum(i);
         }
         /** Вывод суммы всех выплат
          * */

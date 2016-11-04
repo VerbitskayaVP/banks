@@ -18,7 +18,7 @@ public class Main {
          * @see starting_value#starting_value()
          * */
         starting_value start = new starting_value();
-        start.starting_value();
+        start.startingValue();
 
         /** Расчет кредита
          * @see input_data#calculation()

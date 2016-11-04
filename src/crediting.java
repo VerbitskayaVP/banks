@@ -1,12 +1,16 @@
 import java.util.Scanner;
-/** Класс служит для назначени япроцентной ставки в зависимости от программы кредитования
+
+/**
+ * Класс служит для назначени япроцентной ставки в зависимости от программы кредитования
+ *
  * @author Veronika
- * */
+ */
 public class crediting extends input_data {
     public int i;
-    public void crediting(){
-        Scanner scanner=new Scanner(System.in);
-        i= scanner.nextInt();
+
+    public void crediting() {
+        Scanner scanner = new Scanner(System.in);
+        i = scanner.nextInt();
         switch (i) {
             case 1:
                 interest_rate = 18;

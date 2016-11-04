@@ -1,19 +1,27 @@
-/** Класс служит для расчета выплат по аннуитетному типу кредитования
+/**
+ * Класс служит для расчета выплат по аннуитетному типу кредитования
+ *
  * @author Veronika
- * */
+ */
 public class annuity_payment extends input_data {
     /**
      * Объявление переменной 1/12 для сокращения следующей строки в формуле
+     *
+     * @value one_twelfth
      */
-
     static double one_twelfth = interest_rate / 100 / 12;
     /**
      * Расчет ежемесячного платежа
+     *
+     * @value monthly_payment - месячный платеж
      */
     static double monthly_payment = sum * (one_twelfth + (one_twelfth / (Math.pow((1 + one_twelfth), loan_term) - 1)));
     static double balance = monthly_payment * loan_term;
     static double procent = 0;
 
+    /**
+     *
+     * */
     public void calculation(int i) {
         format_class f = new format_class();
         System.out.println(" \nМесяц " + (i + 1) + ":");

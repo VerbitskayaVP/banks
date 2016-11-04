@@ -1,10 +1,13 @@
 import java.util.Scanner;
-/** Класс служит для проверки правильность ввода цифр из меню
+
+/**
+ * Класс служит для проверки правильность ввода цифр из меню
+ *
  * @author Veronika
- * */
-public class currency extends input_data{
-    public void currency(){
-        Scanner scanner=new Scanner(System.in);
+ */
+public class currency extends input_data {
+    public void currency() {
+        Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
         switch (i) {
             case 1:
