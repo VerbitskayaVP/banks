@@ -5,6 +5,7 @@ public class annuity_payment extends input_data {
     /**
      * Объявление переменной 1/12 для сокращения следующей строки в формуле
      */
+
     static double one_twelfth = interest_rate / 100 / 12;
     /**
      * Расчет ежемесячного платежа
