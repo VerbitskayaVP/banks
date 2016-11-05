@@ -5,21 +5,21 @@ import java.util.Scanner;
  *
  * @author Veronika
  */
-public class payment_type extends input_data {
-    public void payment_type() {
+class PaymentType extends InputData {
+    void paymentType() {
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
 
         switch (i) {
             case 1:
-                payment_type = "Аннуитетный";
+                paymentType = "Аннуитетный";
                 break;
             case 2:
-                payment_type = "Дифференцированный";
+                paymentType = "Дифференцированный";
                 break;
             default:
                 System.out.println("Неверные данные. Выберите цифру из списка.");
-                payment_type();
+                paymentType();
         }
     }
 }

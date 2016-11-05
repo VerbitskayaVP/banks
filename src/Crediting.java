@@ -5,7 +5,7 @@ import java.util.Scanner;
  *
  * @author Veronika
  */
-public class crediting extends input_data {
+public class Crediting extends InputData {
     public int i;
 
     public void crediting() {
@@ -13,19 +13,19 @@ public class crediting extends input_data {
         i = scanner.nextInt();
         switch (i) {
             case 1:
-                interest_rate = 18;
+                interestRate = 18;
                 break;
             case 2:
-                interest_rate = 17;
+                interestRate = 17;
                 break;
             case 3:
-                interest_rate = 15.5;
+                interestRate = 15.5;
                 break;
             case 4:
-                interest_rate = 12;
+                interestRate = 12;
                 break;
             case 5:
-                interest_rate = 28;
+                interestRate = 28;
                 break;
             default:
                 System.out.println("Неверные данные. Выберите цифру из списка.");

@@ -7,25 +7,25 @@ import java.util.Scanner;
  */
 
 
-public class input_data {
+public class InputData {
     /**
-     * @value interest_rate - процентная ставка
+     * @value interestRate - процентная ставка
      * @value sum - сумма кредита
-     * @loan_term - срок кредита
+     * @value loanTerm- срок кредита
      */
-    static double interest_rate, sum, loan_term;
+    static double interestRate, Sum, loanTerm;
 
     /**
      * @value currency - валюта кредита
-     * @value payment_type - тип платежа
+     * @value paymentType - тип платежа
      */
-    public static String currency, payment_type;
+    static String currency, paymentType;
 
 
     /**
      * Метод для ввода начальных значений (меню)
      *
-     * @see input_data#inputValue()
+     * @see InputData#inputValue()
      */
     public static void inputValue() {
         int i;
@@ -41,59 +41,59 @@ public class input_data {
          * Вызов метода для назначения процентной ставки
          * в зависимости от программы кредитования
          * */
-        crediting Crediting = new crediting();
+        Crediting Crediting = new Crediting();
         Crediting.crediting();
 
         /**Проверка на превышение макисмального кредита
          * в зависимости от программы кредитования
          * @param i - номер программы кредитования*/
         System.out.println("Введите размер кредита:");
-        checkCredit Check = new checkCredit();
+        CheckCredit Check = new CheckCredit();
         Check.checkcredit(Crediting.i);
 
         /** Назначение валюты
          * */
         System.out.println("Выберите валюту кредита:\n 1. Рубли \n 2. Евро \n 3. Доллары");
-        currency Currency = new currency();
+
         Currency.currency();
 
         /**
-         * @param loan_term- срок кредита
+         * @param loanTerm- срок кредита
          * */
         System.out.println("Срок кредита:");
-        loan_term = scanner.nextDouble();
+        loanTerm = scanner.nextDouble();
 
         /** Назначение типа платежа
          * */
         System.out.println("Введите тип платежа: \n 1. Аннуитетный \n 2. Дифференцированный");
-        payment_type Pay = new payment_type();
-        Pay.payment_type();
+        PaymentType Pay = new PaymentType();
+        Pay.paymentType();
     }
 
     /**
      * Метод для вывода расчетов в зависимости от типа платежа
      *
-     * @see input_data#calculation()
+     * @see InputData#calculation()
      */
     public void calculation() {
-        sum Sum = new sum();
+        Sum sum = new Sum();
         System.out.println("*************График платежей*************** \n");
-        for (int i = 0; i < loan_term; i++) {
-            if (payment_type == "Дифференцированный") {
+        for (int i = 0; i < loanTerm; i++) {
+            if (paymentType == "Дифференцированный") {
                 /** Вызов метода для расчета оплаты кредита по дифференцированному типу платежа
                  * */
-                differentiated_payment dif = new differentiated_payment();
+                DifferentiatedPayment dif = new DifferentiatedPayment();
                 dif.calculation(i);
-                dif.print_out(i);
-            } else if (payment_type == "Аннуитетный") {
+                dif.printOut(i);
+            } else if (paymentType == "Аннуитетный") {
                 /** Вызов метода для расчета оплаты кредита по аннуитетному типу платежа
                  * */
-                annuity_payment an_pay = new annuity_payment();
-                an_pay.calculation(i);
+                AnnuityPayment anPay = new AnnuityPayment();
+                anPay.calculation(i);
             }
         }
         /** Вывод суммы всех выплат
          * */
-        Sum.print_out();
+        sum.printOut();
     }
 }

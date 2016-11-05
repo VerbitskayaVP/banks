@@ -9,28 +9,28 @@ public class Main {
 
     public static void start() {
 
-        /** Вызов меню
-         *  @see input_data#inputValue()
+        /* Вызов меню
+           @see InputData#inputValue()
          *  */
-        input_data.inputValue();
+        InputData.inputValue();
 
         /** Вывод введенных значений
-         * @see starting_value#starting_value()
+         * @see StartingValue#startingValue()
          * */
-        starting_value start = new starting_value();
+        StartingValue start = new StartingValue();
         start.startingValue();
 
         /** Расчет кредита
-         * @see input_data#calculation()
+         * @see InputData#calculation()
          * */
-        input_data calc = new input_data();
+        InputData calc = new InputData();
         calc.calculation();
 
         /** Расчитать снова
-         * @see again#again()
+         * @see Again#again()
          * */
-        again again_main = new again();
-        again_main.again();
+        Again againMenu = new Again();
+        againMenu.again();
     }
 
 }

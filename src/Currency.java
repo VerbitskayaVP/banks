@@ -5,8 +5,8 @@ import java.util.Scanner;
  *
  * @author Veronika
  */
-public class currency extends input_data {
-    public void currency() {
+class Currency extends InputData {
+    public static void currency() {
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
         switch (i) {
@@ -21,7 +21,7 @@ public class currency extends input_data {
                 break;
             default:
                 System.out.println("Неверные данные. Выберите цифру из списка.");
-                currency();
+                Currency.currency();
         }
     }
 }

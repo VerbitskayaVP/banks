@@ -3,7 +3,7 @@
  *
  * @author Veronika
  */
-public class differentiated_payment extends input_data {
+class DifferentiatedPayment extends InputData {
     private static double answer;
 
 
@@ -11,23 +11,23 @@ public class differentiated_payment extends input_data {
      * Расчет суммы платежа с процентами
      *
      * @value answer - сумма платежа с процентами
-     * @see differentiated_payment#calculation()
+     * @see DifferentiatedPayment#calculation()
      */
     public void calculation(int i) {
-        answer = ((sum / loan_term) + (sum - (sum / loan_term) * i) * (interest_rate / 100) / 12);
+        answer = ((Sum / loanTerm) + (Sum - (Sum / loanTerm) * i) * (interestRate / 100) / 12);
 
     }
 
     /**
      * Вывод значения
      *
-     * @see differentiated_payment#print_out(int)
+     * @see DifferentiatedPayment#printOut(int)
      */
-    void print_out(int i) {
-        format_class f = new format_class();
+    void printOut(int i) {
+        FormatClass f = new FormatClass();
 
         System.out.println("Месяц " + (i + 1) + ": ");
-        System.out.println(" Основной долг: " + f.format(sum / loan_term) + "\n Сумма платежа с процентами: " + f.format(answer));
+        System.out.println(" Основной долг: " + f.format(Sum / loanTerm) + "\n Сумма платежа с процентами: " + f.format(answer));
         System.out.println("");
     }
 }

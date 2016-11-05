@@ -3,7 +3,7 @@
  *
  * @author Veronika
  */
-public class format_class {
+class FormatClass {
     String format(double num) {
         return String.format("%.2f", num);
     }
